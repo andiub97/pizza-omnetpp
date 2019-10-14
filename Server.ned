@@ -23,7 +23,12 @@ simple Server
 
         string fetchingAlgorithm @enum("priority","random","roundRobin","longestQueue") = default("priority");
              // how the next job will be choosen from the attached queues
-        volatile double serviceTime @unit(s); // service time of a job
+        volatile double serviceTimeDirectU1 @unit(s); // service time of a PS job directly managed
+        volatile double serviceTimeDirectU2 @unit(s);
+        volatile double serviceTimeForInventoryU1 @unit(s); //service time of a PS job gotten from inventory
+        volatile double serviceTimeForInventoryU2 @unit(s); //service time of a PS job gotten from inventory
+        volatile double probabilityProducing;
+        volatile int maxInventoriedPS; //maximum number of inventoried PS stored
     gates:
         input in[];
         output out;

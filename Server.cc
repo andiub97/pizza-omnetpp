@@ -21,7 +21,11 @@ Server::Server()
     selectionStrategy = nullptr;
     jobServiced = nullptr;
     endServiceMsg = nullptr;
+    endProducingMsgU1 = nullptr;
+    endProducingMsgU2 = nullptr;
     allocated = false;
+    inventoriedPSU1 = 0;
+    inventoriedPSU2 = 0;
 }
 
 Server::~Server()
@@ -29,6 +33,8 @@ Server::~Server()
     delete selectionStrategy;
     delete jobServiced;
     cancelAndDelete(endServiceMsg);
+    cancelAndDelete(endProducingMsgU1);
+    cancelAndDelete(endProducingMsgU2);
 }
 
 void Server::initialize()
@@ -37,6 +43,8 @@ void Server::initialize()
     emit(busySignal, false);
 
     endServiceMsg = new cMessage("end-service");
+    endProducingMsgU1 = new cMessage("end-producing-u1");
+    endProducingMsgU2 = new cMessage("end-producing-u2");
     jobServiced = nullptr;
     allocated = false;
     selectionStrategy = SelectionStrategy::create(par("fetchingAlgorithm"), this, true);
@@ -53,23 +61,63 @@ void Server::handleMessage(cMessage *msg)
         jobServiced->setTotalServiceTime(jobServiced->getTotalServiceTime() + d);
 
         EV << "Finishing service of " << jobServiced->getName() << endl;
+        //Send out the job
         send(jobServiced, "out");
         jobServiced = nullptr;
         EV << "Lock access to PS (allocate) " << endl;
-        //allocated = true;
-        //emit(busySignal, false);
 
-        // examine all input queues, and request a new job from a non empty queue
-        //int k = selectionStrategy->select();
-        //if (k >= 0) {
-        //    EV << "requesting job from queue " << k << endl;
-        //    cGate *gate = selectionStrategy->selectableGate(k);
-        //    check_and_cast<IPassiveQueue *>(gate->getOwnerModule())->request(gate->getIndex());
+        if(bernoulli(par("probabilityProducing").doubleValue())){
+            if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
+                EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
+                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
+                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
+            }
+        } else {
+            if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
+                EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
+                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
+                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
+            }
+        }
 
-        //}
     }
-
+    else if (msg == endProducingMsgU1){
+        inventoriedPSU1++;
+        EV << "Finished producing PS for inventory: n="<< inventoriedPSU1 << endl;
+        if(bernoulli(par("probabilityProducing").doubleValue())){
+            if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
+                EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
+                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
+                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
+            }
+        } else {
+            if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
+                EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
+                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
+                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
+            }
+        }
+    }
+    else if (msg == endProducingMsgU2){
+            inventoriedPSU2++;
+            EV << "Finished producing PS for inventory: n="<< inventoriedPSU2 << endl;
+            if(bernoulli(par("probabilityProducing").doubleValue())){
+                if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
+                    EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
+                    simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
+                    scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
+                }
+            } else {
+                if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
+                    EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
+                    simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
+                    scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
+                }
+            }
+        }
     else {
+        cancelEvent(endProducingMsgU1);
+        cancelEvent(endProducingMsgU2);
         if (!allocated)
             error("job arrived, but the sender did not call allocate() previously");
         if (jobServiced)
@@ -77,8 +125,32 @@ void Server::handleMessage(cMessage *msg)
 
         jobServiced = check_and_cast<Job *>(msg);
         EV << "Starting service of " << jobServiced->getName() << endl;
-        simtime_t serviceTime = par("serviceTime");
-        scheduleAt(simTime()+serviceTime, endServiceMsg);
+
+        //Serve job from inventory or directly
+        EV << "Job Type: " << jobServiced->getKind() << endl;
+
+
+
+        if (jobServiced->getKind() == 1) {
+            if(inventoriedPSU1>0){
+                EV << "Serving from inventory" << endl;
+                inventoriedPSU1--;
+                scheduleAt(simTime(),endServiceMsg);
+            } else {
+                simtime_t serviceTime = par("serviceTimeDirectU1");
+                scheduleAt(simTime()+serviceTime, endServiceMsg);
+            }
+        } else if (jobServiced->getKind() == 2) {
+            if(inventoriedPSU2>0){
+                EV << "Serving from inventory" << endl;
+                inventoriedPSU2--;
+                scheduleAt(simTime(),endServiceMsg);
+            } else {
+                simtime_t serviceTime = par("serviceTimeDirectU2");
+                scheduleAt(simTime()+serviceTime, endServiceMsg);
+            }
+        }
+
         emit(busySignal, true);
     }
 }

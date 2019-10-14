@@ -56,9 +56,6 @@ void Queue::handleMessage(cMessage *msg)
             simtime_t serviceTime = startService(jobServiced);
             scheduleAt(simTime()+serviceTime, endServiceMsg);
         }
-        //deallocate
-        //Server *sm = (Server*) msg->getSenderModule();
-        //sm->deallocate();
     }
     else {
         Job *job = check_and_cast<Job *>(msg);
@@ -126,7 +123,14 @@ simtime_t Queue::startService(Job *job)
     job->setTotalQueueingTime(job->getTotalQueueingTime() + d);
     EV << "Starting service of " << job->getName() << endl;
     job->setTimestamp();
-    return par("serviceTime").doubleValue();
+    if(job->getKind()==1){
+        EV << "Job Type: 1" << endl;
+        return par("serviceTimeU1").doubleValue();
+    } else if(job->getKind()==2){
+        EV << "Job Type: 2" << endl;
+        return par("serviceTimeU2").doubleValue();
+    }
+    return 0.1;
 }
 
 void Queue::endService(Job *job)

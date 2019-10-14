@@ -35,3 +35,8 @@
 /.nedfolders
 /.oppbuildspec
 /.project
+
+#OmnetPP Folders
+/out
+/results
+/templates

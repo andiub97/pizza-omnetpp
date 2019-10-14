@@ -33,6 +33,11 @@ class QUEUEING_API Server : public cSimpleModule, public IServer
 
         Job *jobServiced;
         cMessage *endServiceMsg;
+        cMessage *endProducingMsgU1;
+        cMessage *endProducingMsgU2;
+
+        int inventoriedPSU1;
+        int inventoriedPSU2;
 
     public:
         Server();
