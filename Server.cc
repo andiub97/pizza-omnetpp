@@ -83,7 +83,7 @@ void Server::handleMessage(cMessage *msg)
     }
     else if (msg == endProducingMsgU1){
         inventoriedPSU1++;
-        EV << "Finished producing PS for inventory: n="<< inventoriedPSU1 << endl;
+        EV << "Finished producing PS for inventory U1: n="<< inventoriedPSU1 << endl;
         if(bernoulli(par("probabilityProducing").doubleValue())){
             if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
                 EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
@@ -100,7 +100,7 @@ void Server::handleMessage(cMessage *msg)
     }
     else if (msg == endProducingMsgU2){
             inventoriedPSU2++;
-            EV << "Finished producing PS for inventory: n="<< inventoriedPSU2 << endl;
+            EV << "Finished producing PS for inventory U2: n="<< inventoriedPSU2 << endl;
             if(bernoulli(par("probabilityProducing").doubleValue())){
                 if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
                     EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
@@ -176,14 +176,19 @@ void Server::allocate()
 
 void Server::deallocate()
 {
-    allocated = true;
-    emit(busySignal, false);
 
+    allocated = false;
+    emit(busySignal, false);
     // examine all input queues, and request a new job from a non empty queue
     int k = selectionStrategy->select();
+    EV << "requesting job from queue " << k << endl;
     if (k >= 0) {
         EV << "requesting job from queue " << k << endl;
         cGate *gate = selectionStrategy->selectableGate(k);
+        EV << gate << endl;
+        EV << gate->getOwnerModule() << endl;
+        EV << gate->getIndex() << endl;
+
         check_and_cast<IPassiveQueue *>(gate->getOwnerModule())->request(gate->getIndex());
     }
 }

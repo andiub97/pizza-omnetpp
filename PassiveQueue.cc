@@ -86,7 +86,6 @@ int PassiveQueue::length()
 void PassiveQueue::request(int gateIndex)
 {
     Enter_Method("request()!");
-
     ASSERT(!queue.isEmpty());
 
     Job *job;

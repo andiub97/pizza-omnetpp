@@ -35,17 +35,21 @@ network Pizza
         PS: Server {
             @display("p=219,98");
         }
-        EntryQueue: PassiveQueue {
-            @display("p=134,98");
+        EntryQueueU1: PassiveQueue {
+            @display("p=134,59");
         }
         CS: Queue {
             @display("p=314,98");
             capacity = 0;
         }
+        EntryQueueU2: PassiveQueue {
+            @display("p=134,137");
+        }
     connections:
-        U1.out --> EntryQueue.in++;
-        U2.out --> EntryQueue.in++;
-        EntryQueue.out++ --> PS.in++;
+        U1.out --> EntryQueueU1.in++;
+        U2.out --> EntryQueueU2.in++;
+        EntryQueueU1.out++ --> PS.in++;
+        EntryQueueU2.out++ --> PS.in++;
         PS.out --> CS.in++;
         CS.out --> sink.in++;
 }
