@@ -27,8 +27,8 @@ PassiveQueue::~PassiveQueue()
 
 void PassiveQueue::initialize()
 {
-    droppedSignal = registerSignal("dropped");
-    queueingTimeSignal = registerSignal("queueingTime");
+    //droppedSignal = registerSignal("dropped");
+    //queueingTimeSignal = registerSignal("queueingTime");
     queueLengthSignal = registerSignal("queueLength");
     emit(queueLengthSignal, 0);
 
@@ -52,7 +52,7 @@ void PassiveQueue::handleMessage(cMessage *msg)
         EV << "Queue full! Job dropped.\n";
         if (hasGUI())
             bubble("Dropped!");
-        emit(droppedSignal, 1);
+        //emit(droppedSignal, 1);
         delete msg;
         return;
     }
@@ -102,7 +102,7 @@ void PassiveQueue::request(int gateIndex)
     job->setQueueCount(job->getQueueCount()+1);
     simtime_t d = simTime() - job->getTimestamp();
     job->setTotalQueueingTime(job->getTotalQueueingTime() + d);
-    emit(queueingTimeSignal, d);
+    //emit(queueingTimeSignal, d);
 
     sendJob(job, gateIndex);
 }

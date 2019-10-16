@@ -185,10 +185,6 @@ void Server::deallocate()
     if (k >= 0) {
         EV << "requesting job from queue " << k << endl;
         cGate *gate = selectionStrategy->selectableGate(k);
-        EV << gate << endl;
-        EV << gate->getOwnerModule() << endl;
-        EV << gate->getIndex() << endl;
-
         check_and_cast<IPassiveQueue *>(gate->getOwnerModule())->request(gate->getIndex());
     }
 }

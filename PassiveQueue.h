@@ -25,9 +25,9 @@ class SelectionStrategy;
 class QUEUEING_API PassiveQueue : public cSimpleModule, public IPassiveQueue
 {
     private:
-		simsignal_t droppedSignal;
+		//simsignal_t droppedSignal;
 		simsignal_t queueLengthSignal;
-		simsignal_t queueingTimeSignal;
+		//simsignal_t queueingTimeSignal;
 
         bool fifo;
         int capacity;
