@@ -1,0 +1,105 @@
+version 2
+run First-n3-10-20191016-14:52:53-3676
+attr configname First-n3
+attr datetime 20191016-14:52:53
+attr experiment First-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3676
+attr repetition 10
+attr replication ""
+attr resultdir results
+attr runnumber 10
+attr seedset 10
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+scalar Pizza.U1 created:last 15086
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Pizza.U2 created:last 7564
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Pizza.sink lifeTimeU2:mean 2485.5384123208
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Pizza.sink lifeTimeU2:max 3823.7986299996
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Pizza.sink lifeTimeU2:min 0.04985013144
+attr interpolationmode none
+attr title "lifetime of arrived jobs, min"
+attr unit s
+scalar Pizza.sink lifeTimeU1:mean nan
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Pizza.sink lifeTimeU1:max nan
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Pizza.sink lifeTimeU1:min nan
+attr interpolationmode none
+attr title "lifetime of arrived jobs, min"
+attr unit s
+scalar Pizza.sink lifeTime:mean 763.47374311258
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Pizza.sink lifeTime:max 3823.7986299996
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Pizza.sink lifeTime:min 0.002336276476
+attr interpolationmode none
+attr title "lifetime of arrived jobs, min"
+attr unit s
+scalar Pizza.PS busy:timeavg 0.99880057469099
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Pizza.EntryQueueU1 queueLength:timeavg 2.6709892464612
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Pizza.EntryQueueU1 queueLength:max 23
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Pizza.CS queueingTime:mean 0
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Pizza.CS queueingTime:max 0
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Pizza.CS dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Pizza.CS queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Pizza.CS queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Pizza.CS busy:timeavg 0.61737433087421
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Pizza.EntryQueueU2 queueLength:timeavg 606.47747712266
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Pizza.EntryQueueU2 queueLength:max 957
+attr interpolationmode sample-hold
+attr title "queue length, max"
+

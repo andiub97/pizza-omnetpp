@@ -1,0 +1,51 @@
+file 2523755 1571230389                                         
+version 2
+run First-n3-16-20191016-14:53:08-1856
+attr configname First-n3
+attr datetime 20191016-14:53:08
+attr experiment First-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1856
+attr repetition 16
+attr replication ""
+attr resultdir results
+attr runnumber 16
+attr seedset 16
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1484 883109 0 164213 0 29999.9585512692 29484 0 24 98998 705634
+1	884593 9 0 0 0 0 1 0 0 0 0
+2	884602 434857 0 164169 0 29990.880735815635 13691 0 1061 6731847 4637751173
+3	1319459 923345 7 164209 0.611476025569 29998.838900944869 21378 0.002470890603 4158.0863908486 12336455.294848 33371931598.329
+4	2242804 280949 17 164178 1.654916754784 29991.297527703387 6429 0.016988437624 4158.0863908486 12232123.162065 33370567972.326
+
