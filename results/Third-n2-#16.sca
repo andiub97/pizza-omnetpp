@@ -1,14 +1,14 @@
 version 2
-run Third-n2-16-20191016-14:53:54-11220
+run Third-n2-16-20191016-17:04:58-10488
 attr configname Third-n2
-attr datetime 20191016-14:53:54
+attr datetime 20191016-17:04:58
 attr experiment Third-n2
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network org.omnetpp.queueing.Pizza
-attr processid 11220
+attr processid 10488
 attr repetition 16
 attr replication ""
 attr resultdir results
@@ -43,15 +43,15 @@ scalar Pizza.sink lifeTimeU2:min 2.740673553124
 attr interpolationmode none
 attr title "lifetime of arrived jobs, min"
 attr unit s
-scalar Pizza.sink lifeTimeU1:mean nan
+scalar Pizza.sink lifeTimeU1:mean 11.488261837095
 attr interpolationmode none
 attr title "lifetime of arrived jobs, mean"
 attr unit s
-scalar Pizza.sink lifeTimeU1:max nan
+scalar Pizza.sink lifeTimeU1:max 77.116455124522
 attr interpolationmode none
 attr title "lifetime of arrived jobs, max"
 attr unit s
-scalar Pizza.sink lifeTimeU1:min nan
+scalar Pizza.sink lifeTimeU1:min 0.092879175106
 attr interpolationmode none
 attr title "lifetime of arrived jobs, min"
 attr unit s
@@ -73,6 +73,9 @@ attr title "server busy state, timeavg"
 scalar Pizza.EntryQueueU1 queueLength:timeavg 2.1790137601609
 attr interpolationmode sample-hold
 attr title "queue length, timeavg"
+scalar Pizza.EntryQueueU1 queueLength:mean 2.715104131563
+attr interpolationmode sample-hold
+attr title "queue length, mean"
 scalar Pizza.EntryQueueU1 queueLength:max 24
 attr interpolationmode sample-hold
 attr title "queue length, max"
@@ -99,6 +102,9 @@ attr title "server busy state, timeavg"
 scalar Pizza.EntryQueueU2 queueLength:timeavg 960.6221969738
 attr interpolationmode sample-hold
 attr title "queue length, timeavg"
+scalar Pizza.EntryQueueU2 queueLength:mean 975.60679133858
+attr interpolationmode sample-hold
+attr title "queue length, mean"
 scalar Pizza.EntryQueueU2 queueLength:max 1915
 attr interpolationmode sample-hold
 attr title "queue length, max"

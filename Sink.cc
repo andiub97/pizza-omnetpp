@@ -17,7 +17,7 @@ Define_Module(Sink);
 void Sink::initialize()
 {
     lifeTimeSignal = registerSignal("lifeTime");
-    lifeTimeSignalU1  = registerSignal("lifeTimeu1");
+    lifeTimeSignalU1  = registerSignal("lifeTimeU1");
     lifeTimeSignalU2 = registerSignal("lifeTimeU2");
     //totalQueueingTimeSignal = registerSignal("totalQueueingTime");
     //queuesVisitedSignal = registerSignal("queuesVisited");
