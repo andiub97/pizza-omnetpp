@@ -1,0 +1,13 @@
+StatisticalAnalysis/data_vector filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Second-n4.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Third-n2.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Third-n3.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/First-n2.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/First-n3.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/First-n4.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/First-n5.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Second-n3.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Third-n5.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Second-n2.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Second-n5.csv filter=lfs diff=lfs merge=lfs -text
+StatisticalAnalysis/data_vector/Third-n4.csv filter=lfs diff=lfs merge=lfs -text
