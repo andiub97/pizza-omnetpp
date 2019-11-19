@@ -40,3 +40,7 @@
 #OmnetPP Folders
 /out
 /templates
+/results
+/results_no_transient
+/anf
+/anf_no_transient
