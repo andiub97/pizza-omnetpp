@@ -1,0 +1,56 @@
+file 6848 1574681850                                            
+version 2
+run Second-n4-16-20191125-12:37:30-3704
+attr configname Second-n4
+attr datetime 20191125-12:37:30
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3704
+attr repetition 16
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 16
+attr seedset 16
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 873 0 415 0 99.951403517388 36 0 4 44 90
+1	2505 9 0 0 0 0 1 0 0 0 0
+2	2514 506 0 401 0 98.052954358629 21 0 4 28 66
+3	3020 1913 7 407 0.889627516804 99.125166934639 51 0.077836304579 11.355849059646 155.83813429984 971.96533129286
+4	4933 1043 7 384 0.889627516804 94.975549454426 28 0.077836304579 7.085675010625 61.891107840082 229.71706131702
+5	5976 870 17 407 2.079583953941 99.125166934639 23 0.102088097642 11.355849059646 93.94702645976 742.24826997584
+

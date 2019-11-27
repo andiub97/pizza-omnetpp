@@ -1,0 +1,56 @@
+file 5961 1574681880                                            
+version 2
+run Third-n5-9-20191125-12:38:00-6668
+attr configname Third-n5
+attr datetime 20191125-12:38:00
+attr experiment Third-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6668
+attr repetition 9
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 9
+attr seedset 9
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 1189 0 295 0 99.514718718318 49 0 6 118 444
+1	2814 9 0 0 0 0 1 0 0 0 0
+2	2823 644 0 250 0 85.512391717579 27 0 6 63 229
+3	3467 1246 9 283 1.616699494875 97.16027162617 33 0.974927725455 25.978290433362 316.77281227755 4377.8026200545
+4	4713 827 9 283 1.616699494875 97.16027162617 22 1.574986115594 16.84447402913 179.84430643292 1977.8566996854
+5	5540 419 24 201 3.694618899783 72.846777670286 11 0.974927725455 25.978290433362 136.92850584463 2399.945920369
+

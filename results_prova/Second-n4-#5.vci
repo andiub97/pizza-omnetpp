@@ -1,0 +1,56 @@
+file 7685 1574681838                                            
+version 2
+run Second-n4-5-20191125-12:37:18-5164
+attr configname Second-n4
+attr datetime 20191125-12:37:18
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 5164
+attr repetition 5
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 5
+attr seedset 5
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1628 1674 0 401 0 97.966984945918 69 0 5 126 354
+1	3302 9 0 0 0 0 1 0 0 0 0
+2	3311 552 0 337 0 82.896712872505 23 0 3 29 59
+3	3863 1910 16 403 3.713850244484 97.966984945918 51 0.205294014578 21.682963992362 309.76020975025 2793.9978264297
+4	5773 602 16 403 3.713850244484 97.966984945918 16 1.784952613102 21.682963992362 132.33924189031 1579.633574265
+5	6375 1308 22 392 5.225158783124 94.799980279104 35 0.205294014578 10.650090030597 177.42096785994 1214.3642521647
+

@@ -1,0 +1,56 @@
+file 9104 1574681816                                            
+version 2
+run First-n5-6-20191125-12:36:56-6152
+attr configname First-n5
+attr datetime 20191125-12:36:56
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6152
+attr repetition 6
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 6
+attr seedset 6
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 1684 0 471 0 92.23814945773 69 0 8 156 630
+1	3309 9 0 0 0 0 1 0 0 0 0
+2	3318 730 0 525 0 99.800332900173 30 0 7 65 259
+3	4048 2527 7 513 4.78327863324 96.048949366973 67 0.070926197992 24.809622012209 384.29263938581 4972.6152776441
+4	6575 1840 7 513 4.78327863324 96.048949366973 49 0.070926197992 12.362052011527 208.12453858392 1547.4803758382
+5	8415 687 50 506 11.945932567634 95.481752568293 18 0.157933238771 24.809622012209 176.16810080189 3425.134901806
+

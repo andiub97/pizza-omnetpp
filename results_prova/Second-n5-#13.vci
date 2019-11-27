@@ -1,0 +1,56 @@
+file 6027 1574681855                                            
+version 2
+run Second-n5-13-20191125-12:37:35-5216
+attr configname Second-n5
+attr datetime 20191125-12:37:35
+attr experiment Second-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 5216
+attr repetition 13
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 13
+attr seedset 13
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 650 0 334 0 93.369919581252 27 0 3 23 37
+1	2282 9 0 0 0 0 1 0 0 0 0
+2	2291 502 0 339 0 93.384536958162 21 0 2 14 18
+3	2793 1616 16 345 11.215102530395 95.318922927644 43 0.035666046108 13.101006774455 113.35623306691 657.98088781569
+4	4409 1088 16 341 11.215102530395 93.384536958162 29 0.035666046108 6.703887629331 60.610064700618 243.62693539139
+5	5497 528 28 345 12.168995606313 95.318922927644 14 0.278355125147 13.101006774455 52.746168366293 414.35395242431
+

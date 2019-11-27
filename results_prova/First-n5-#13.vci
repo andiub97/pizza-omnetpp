@@ -1,0 +1,56 @@
+file 9805 1574681826                                            
+version 2
+run First-n5-13-20191125-12:37:06-6164
+attr configname First-n5
+attr datetime 20191125-12:37:06
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6164
+attr repetition 13
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 13
+attr seedset 13
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2027 0 559 0 99.92793106206 83 0 3 95 169
+1	3656 9 0 0 0 0 1 0 0 0 0
+2	3665 794 0 535 0 96.973083241933 33 0 5 52 136
+3	4459 2672 17 553 8.239772737911 99.680027239706 71 0.017308565146 15.531607375819 226.23186946676 1327.579619067
+4	7131 1954 17 553 8.239772737911 99.680027239706 52 0.017308565146 5.9497859121 124.70075824184 446.39418424118
+5	9085 718 71 541 16.409316426529 97.224303293573 19 0.031682481189 15.531607375819 101.53111122492 881.18543482582
+

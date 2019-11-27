@@ -1,0 +1,56 @@
+file 6658 1574681891                                            
+version 2
+run Third-n5-15-20191125-12:38:11-4984
+attr configname Third-n5
+attr datetime 20191125-12:38:11
+attr experiment Third-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4984
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1384 0 323 0 94.812405170328 57 0 4 94 232
+1	3013 9 0 0 0 0 1 0 0 0 0
+2	3022 672 0 327 0 95.950106855291 28 0 8 100 462
+3	3694 1481 28 319 15.176464933403 93.879809677906 39 0.539772105223 45.863546976933 494.92756319592 11104.622864045
+4	5175 1057 28 308 15.176464933403 91.303247821561 28 0.539772105223 11.826013362607 190.86211881213 1628.0646515417
+5	6232 424 73 319 25.612473951489 93.879809677906 11 9.876097095683 45.863546976933 304.06544438379 9476.5582125032
+

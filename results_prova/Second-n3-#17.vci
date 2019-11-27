@@ -1,0 +1,56 @@
+file 5338 1574681844                                            
+version 2
+run Second-n3-17-20191125-12:37:24-3940
+attr configname Second-n3
+attr datetime 20191125-12:37:24
+attr experiment Second-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3940
+attr repetition 17
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 17
+attr seedset 17
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 677 0 273 0 91.253106955054 29 0 2 22 30
+1	2309 9 0 0 0 0 1 0 0 0 0
+2	2318 248 0 259 0 86.941769125346 11 0 3 11 21
+3	2566 1385 17 299 5.771218478445 98.830365725612 37 0.010930993953 9.329859394836 78.913036198104 372.05811066389
+4	3951 524 17 268 5.771218478445 90.753595248529 14 0.071896323177 9.329859394836 41.74334103763 235.7626022946
+5	4475 861 27 299 7.933346283132 98.830365725612 23 0.010930993953 7.177733359547 37.169695160474 136.29550836928
+

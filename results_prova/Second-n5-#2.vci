@@ -1,0 +1,56 @@
+file 7000 1574681846                                            
+version 2
+run Second-n5-2-20191125-12:37:26-5216
+attr configname Second-n5
+attr datetime 20191125-12:37:26
+attr experiment Second-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 5216
+attr repetition 2
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 2
+attr seedset 2
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1628 1065 0 403 0 99.527717907554 44 0 2 30 38
+1	2693 9 0 0 0 0 1 0 0 0 0
+2	2702 540 0 313 0 80.207869147095 23 0 2 23 35
+3	3242 1878 15 405 5.540971110126 99.527717907554 50 0.000135950996 14.410948750887 152.1057490704 884.95602117549
+4	5120 714 15 385 5.540971110126 93.55907779391 19 0.070143521937 14.410948750887 85.549696175534 659.40287376081
+5	5834 1164 20 405 6.603205211783 99.527717907554 31 0.000135950996 6.556884127149 66.556052894863 225.55314741468
+

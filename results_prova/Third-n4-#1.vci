@@ -1,0 +1,56 @@
+file 4450 1574681866                                            
+version 2
+run Third-n4-1-20191125-12:37:46-9296
+attr configname Third-n4
+attr datetime 20191125-12:37:46
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9296
+attr repetition 1
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 1
+attr seedset 1
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 667 0 224 0 99.319626588642 28 0 4 44 110
+1	2292 9 0 0 0 0 1 0 0 0 0
+2	2301 207 0 198 0 94.955531992048 9 0 6 22 92
+3	2508 970 12 226 7.84011273442 99.319626588642 26 0.042452429399 13.82303686413 111.77643514857 817.36201658077
+4	3478 782 12 226 7.84011273442 99.319626588642 21 0.20442291576 13.82303686413 106.29766719626 808.74733547112
+5	4260 188 69 132 35.664437330492 63.968465629974 5 0.042452429399 1.799215423277 5.478767952304 8.61468110965
+

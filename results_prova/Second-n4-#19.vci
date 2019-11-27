@@ -1,0 +1,56 @@
+file 7367 1574681852                                            
+version 2
+run Second-n4-19-20191125-12:37:32-8256
+attr configname Second-n4
+attr datetime 20191125-12:37:32
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 8256
+attr repetition 19
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 19
+attr seedset 19
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1447 0 398 0 98.565304206505 59 0 4 85 189
+1	3079 9 0 0 0 0 1 0 0 0 0
+2	3088 597 0 395 0 98.321563473378 25 0 5 36 100
+3	3685 1840 7 400 1.216599224106 98.565304206505 49 0.220334136508 13.931974361733 223.91097392703 1590.5570260647
+4	5525 1275 7 400 1.216599224106 98.565304206505 34 0.220334136508 8.400808394211 120.51924082949 565.24255741317
+5	6800 565 24 369 5.455398938106 94.563555251652 15 0.265233103599 13.931974361733 103.39173309754 1025.3144686516
+

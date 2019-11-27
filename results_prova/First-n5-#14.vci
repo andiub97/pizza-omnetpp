@@ -1,0 +1,56 @@
+file 10232 1574681827                                           
+version 2
+run First-n5-14-20191125-12:37:07-1372
+attr configname First-n5
+attr datetime 20191125-12:37:07
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1372
+attr repetition 14
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 14
+attr seedset 14
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2024 0 578 0 98.640217432179 83 0 4 139 341
+1	3653 9 0 0 0 0 1 0 0 0 0
+2	3662 996 0 583 0 99.304877313324 41 0 4 72 180
+3	4658 2786 7 585 2.740669890449 99.304877313324 74 0.149541479198 14.86143139257 318.83819595319 2614.5582123898
+4	7444 2062 7 585 2.740669890449 99.304877313324 55 0.149541479198 11.834962299629 161.77588038408 837.14597681151
+5	9506 724 113 580 23.957282123322 98.640217432179 19 0.726888665501 14.86143139257 157.06231556911 1777.4122355783
+

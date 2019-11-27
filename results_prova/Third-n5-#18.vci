@@ -1,0 +1,56 @@
+file 6831 1574681893                                            
+version 2
+run Third-n5-18-20191125-12:38:13-2880
+attr configname Third-n5
+attr datetime 20191125-12:38:13
+attr experiment Third-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 2880
+attr repetition 18
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 18
+attr seedset 18
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1190 0 339 0 98.672921061206 49 0 3 38 56
+1	2819 9 0 0 0 0 1 0 0 0 0
+2	2828 693 0 317 0 90.764399555656 29 0 6 56 182
+3	3521 1654 8 346 1.95605794728 99.929110374168 44 0.476120887812 25.283591853478 308.01297349372 4196.9272415847
+4	5175 607 8 323 1.95605794728 93.229604846767 16 1.481728780304 25.283591853478 212.70624977944 3750.865752189
+5	5782 1047 24 346 7.383017765291 99.929110374168 28 0.476120887812 8.518363073244 95.306723714279 446.06148939571
+

@@ -1,0 +1,56 @@
+file 7051 1574681849                                            
+version 2
+run Second-n4-14-20191125-12:37:29-7932
+attr configname Second-n4
+attr datetime 20191125-12:37:29
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 7932
+attr repetition 14
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 14
+attr seedset 14
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1074 0 378 0 99.949020463297 44 0 4 58 118
+1	2706 9 0 0 0 0 1 0 0 0 0
+2	2715 876 0 368 0 96.99155593257 36 0 3 34 58
+3	3591 1729 7 374 3.679748173176 99.036208612713 46 0.219116777024 10.747003653101 162.05571706735 806.90539479505
+4	5320 1013 7 374 3.679748173176 99.036208612713 27 0.219116777024 5.681797047417 67.913657460009 230.55530114403
+5	6333 716 42 304 14.702830085183 88.590575398626 19 1.954424038524 10.747003653101 94.142059607337 576.35009365103
+

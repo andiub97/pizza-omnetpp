@@ -1,0 +1,56 @@
+file 8827 1574681835                                            
+version 2
+run First-n3-19-20191125-12:37:15-9900
+attr configname First-n3
+attr datetime 20191125-12:37:15
+attr experiment First-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9900
+attr repetition 19
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 19
+attr seedset 19
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1735 0 504 0 98.471487632061 71 0 4 81 151
+1	3364 9 0 0 0 0 1 0 0 0 0
+2	3373 720 0 508 0 98.858338267195 30 0 3 29 47
+3	4093 2366 7 506 0.962921035824 98.471487632061 63 0.091062761592 13.470422864262 169.2862762217 755.77842343653
+4	6459 1542 7 506 0.962921035824 98.471487632061 41 0.091062761592 6.486528796006 97.404349281929 328.41334382049
+5	8001 824 25 439 4.736737406642 86.724077060502 22 0.117447398746 13.470422864262 71.881926939774 427.36507961604
+

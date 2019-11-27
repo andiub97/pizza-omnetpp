@@ -1,0 +1,56 @@
+file 6868 1574681821                                            
+version 2
+run Second-n2-6-20191125-12:37:01-10784
+attr configname Second-n2
+attr datetime 20191125-12:37:01
+attr experiment Second-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10784
+attr repetition 6
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 6
+attr seedset 6
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1630 1087 0 359 0 99.333214686175 45 0 2 34 46
+1	2717 9 0 0 0 0 1 0 0 0 0
+2	2726 698 0 353 0 99.098182536838 29 0 2 24 34
+3	3424 1721 7 361 7.076670390206 99.333214686175 46 0.100241681012 9.44600863541 128.77781244952 558.2963640808
+4	5145 1120 7 361 7.076670390206 99.333214686175 30 0.100241681012 6.646199647493 64.689836700097 206.52076998915
+5	6265 601 55 314 19.298071374001 90.743731579102 16 0.589263973246 9.44600863541 64.087975749425 351.77559409165
+

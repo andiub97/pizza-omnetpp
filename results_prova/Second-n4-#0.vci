@@ -1,0 +1,56 @@
+file 8757 1574681832                                            
+version 2
+run Second-n4-0-20191125-12:37:12-10012
+attr configname Second-n4
+attr datetime 20191125-12:37:12
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10012
+attr repetition 0
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 0
+attr seedset 0
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1630 1538 0 483 0 99.575759706209 63 0 5 79 199
+1	3168 9 0 0 0 0 1 0 0 0 0
+2	3177 1066 0 474 0 95.54678990169 44 0 4 66 150
+3	4243 2256 14 485 7.057929870225 99.575759706209 60 0.020865426121 18.934443325044 278.14067706228 2201.7731290798
+4	6499 1352 14 465 7.057929870225 95.52080672858 36 0.020865426121 12.442007778405 120.43886900789 744.61040996972
+5	7851 904 24 485 7.799195953155 99.575759706209 24 0.579009790129 18.934443325044 157.70180805439 1457.1627191101
+

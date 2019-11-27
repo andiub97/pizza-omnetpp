@@ -1,0 +1,56 @@
+file 7635 1574681845                                            
+version 2
+run Second-n3-18-20191125-12:37:25-3752
+attr configname Second-n3
+attr datetime 20191125-12:37:25
+attr experiment Second-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3752
+attr repetition 18
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 18
+attr seedset 18
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1426 0 386 0 86.028265203746 59 0 4 77 157
+1	3058 9 0 0 0 0 1 0 0 0 0
+2	3067 500 0 308 0 70.616812454063 21 0 4 34 82
+3	3567 2033 7 427 1.469680944072 99.575706680194 54 0.159098721454 22.397465044486 259.24307675772 2401.0055043103
+4	5600 608 7 419 1.469680944072 99.218013709164 16 0.389484280967 22.397465044486 125.53413522449 1642.8510525179
+5	6208 1425 22 427 5.420969847661 99.575706680194 38 0.159098721454 10.109148134178 133.70894153323 758.15445179243
+

@@ -1,0 +1,56 @@
+file 6195 1574681882                                            
+version 2
+run Third-n3-18-20191125-12:38:02-4592
+attr configname Third-n3
+attr datetime 20191125-12:38:02
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4592
+attr repetition 18
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 18
+attr seedset 18
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1211 0 303 0 99.485284868324 50 0 5 79 221
+1	2840 9 0 0 0 0 1 0 0 0 0
+2	2849 714 0 301 0 99.190993560719 30 0 9 81 463
+3	3563 1315 8 291 1.95605794728 92.868404414487 35 0.787658709274 40.452333138455 289.52848930617 4393.9082833266
+4	4878 450 8 275 1.95605794728 86.965476505651 12 0.961363950491 40.452333138455 118.8093740636 2387.9079433352
+5	5328 865 24 291 7.383017765291 92.868404414487 23 0.787658709274 21.841169622688 170.71911524257 2006.0003399914
+

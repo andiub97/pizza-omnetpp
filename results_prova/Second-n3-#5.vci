@@ -1,0 +1,56 @@
+file 7574 1574681826                                            
+version 2
+run Second-n3-5-20191125-12:37:06-9548
+attr configname Second-n3
+attr datetime 20191125-12:37:06
+attr experiment Second-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9548
+attr repetition 5
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 5
+attr seedset 5
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1628 1226 0 398 0 98.017367201752 51 0 5 85 245
+1	2854 9 0 0 0 0 1 0 0 0 0
+2	2863 799 0 405 0 99.493457028783 33 0 4 40 88
+3	3662 1955 16 407 3.713850244484 99.493457028783 52 0.073495757236 27.993849955636 272.6851165088 3157.6216672734
+4	5617 715 16 400 3.713850244484 98.017367201752 19 0.073495757236 27.993849955636 138.08314719198 2224.193096129
+5	6332 1240 22 407 5.225158783124 99.493457028783 33 0.212989639934 10.650090030597 134.60196931682 933.4285711444
+

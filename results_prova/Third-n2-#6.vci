@@ -1,0 +1,56 @@
+file 5510 1574681859                                            
+version 2
+run Third-n2-6-20191125-12:37:39-9836
+attr configname Third-n2
+attr datetime 20191125-12:37:39
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9836
+attr repetition 6
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 6
+attr seedset 6
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 937 0 240 0 96.599489832288 39 0 3 37 59
+1	2562 9 0 0 0 0 1 0 0 0 0
+2	2571 599 0 250 0 98.79193216887 25 0 5 62 196
+3	3170 1169 8 248 9.455388172705 98.111701952563 31 0.520907141449 46.08144412395 345.28677995766 7429.0435544893
+4	4339 786 8 248 9.455388172705 98.111701952563 21 0.520907141449 14.666407263757 115.19637271092 857.93110334221
+5	5125 383 47 242 29.176475843797 96.599489832288 10 11.497556713856 46.08144412395 230.09040724674 6571.1124511471
+

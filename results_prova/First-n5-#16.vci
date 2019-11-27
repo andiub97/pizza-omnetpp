@@ -1,0 +1,56 @@
+file 9422 1574681830                                            
+version 2
+run First-n5-16-20191125-12:37:10-11216
+attr configname First-n5
+attr datetime 20191125-12:37:10
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11216
+attr repetition 16
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 16
+attr seedset 16
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1631 2287 0 510 0 99.72834827545 93 0 6 202 734
+1	3918 9 0 0 0 0 1 0 0 0 0
+2	3927 751 0 502 0 98.363281938068 31 0 10 111 631
+3	4678 2371 7 498 0.611476025569 97.395660804333 63 0.072920069745 39.773982184531 450.36647965848 8389.6055320474
+4	7049 1919 7 498 0.611476025569 97.395660804333 51 0.074342627414 11.113853519905 244.62976013213 1748.148446944
+5	8968 452 17 470 1.654916754784 93.284397429484 12 0.072920069745 39.773982184531 205.73671952635 6641.4570851034
+

@@ -1,0 +1,56 @@
+file 5226 1574681866                                            
+version 2
+run Third-n3-6-20191125-12:37:46-4760
+attr configname Third-n3
+attr datetime 20191125-12:37:46
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4760
+attr repetition 6
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 6
+attr seedset 6
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 689 0 230 0 78.704912150132 29 0 3 28 46
+1	2314 9 0 0 0 0 1 0 0 0 0
+2	2323 357 0 223 0 76.435601648819 15 0 2 9 11
+3	2680 1272 8 268 9.455388172705 96.459390293449 34 0.085779497146 7.902920440352 120.63613753366 606.67137761956
+4	3952 820 8 259 9.455388172705 87.916608156327 22 0.085779497146 7.902920440352 71.87200041833 370.0093822045
+5	4772 452 42 268 23.326989105443 96.459390293449 12 1.761295125555 7.207481390794 48.764137115328 236.66199541507
+

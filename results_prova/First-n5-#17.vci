@@ -1,0 +1,56 @@
+file 9506 1574681832                                            
+version 2
+run First-n5-17-20191125-12:37:12-5964
+attr configname First-n5
+attr datetime 20191125-12:37:12
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 5964
+attr repetition 17
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 17
+attr seedset 17
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2686 0 476 0 98.652448415073 110 0 9 419 2375
+1	4315 9 0 0 0 0 1 0 0 0 0
+2	4324 712 0 461 0 94.273527891893 29 0 17 280 3322
+3	5036 2234 17 472 3.783911004085 96.995315467472 59 1.128171272395 73.928895766705 916.22769688667 36497.819108334
+4	7270 1887 17 472 3.783911004085 96.995315467472 50 1.128171272395 16.534257960207 380.98801651599 3686.3110323033
+5	9157 347 361 447 74.73138099332 92.304357663504 9 41.22617970958 73.928895766705 535.23968037067 32811.50807603
+

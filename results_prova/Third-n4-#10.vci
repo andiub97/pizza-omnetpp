@@ -1,0 +1,56 @@
+file 7174 1574681876                                            
+version 2
+run Third-n4-10-20191125-12:37:56-4708
+attr configname Third-n4
+attr datetime 20191125-12:37:56
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4708
+attr repetition 10
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 10
+attr seedset 10
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1581 0 366 0 99.374191519058 65 0 6 122 360
+1	3210 9 0 0 0 0 1 0 0 0 0
+2	3219 649 0 338 0 94.191928411619 27 0 6 51 177
+3	3868 1652 17 361 7.459240497746 97.222056755827 44 0.81721845472 31.077836700108 312.48537945774 4310.9237737989
+4	5520 526 17 317 7.459240497746 89.414946886736 14 2.602082833358 31.077836700108 162.17112398941 3212.8553139907
+5	6046 1126 22 361 7.671962811305 97.222056755827 30 0.81721845472 13.535113374122 150.31425546833 1098.0684598083
+

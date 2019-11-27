@@ -1,0 +1,56 @@
+file 6261 1574681885                                            
+version 2
+run Third-n4-15-20191125-12:38:05-468
+attr configname Third-n4
+attr datetime 20191125-12:38:05
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 468
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 1079 0 286 0 91.155065252375 45 0 4 56 122
+1	2706 9 0 0 0 0 1 0 0 0 0
+2	2715 898 0 303 0 99.757538876969 37 0 10 130 726
+3	3613 1323 28 299 15.176464933403 99.293532304608 35 1.029456003872 28.320213000105 324.91319168298 4619.4835525686
+4	4936 865 28 299 15.176464933403 99.293532304608 23 1.029456003872 11.826013362607 139.94859978511 1056.5660126598
+5	5801 458 67 242 23.310616837142 78.318908334997 12 4.707893284694 28.320213000105 184.96459189787 3562.9175399088
+

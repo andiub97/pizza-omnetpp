@@ -1,0 +1,56 @@
+file 9315 1574681835                                            
+version 2
+run First-n5-19-20191125-12:37:15-10236
+attr configname First-n5
+attr datetime 20191125-12:37:15
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10236
+attr repetition 19
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 19
+attr seedset 19
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1631 1535 0 534 0 99.597750486803 63 0 6 87 251
+1	3166 9 0 0 0 0 1 0 0 0 0
+2	3175 944 0 490 0 90.59499394818 39 0 8 89 423
+3	4119 2597 7 540 0.962921035824 99.666791112461 69 0.034676080778 28.23661957634 351.69120831958 4736.0242719255
+4	6716 1578 7 540 0.962921035824 99.666791112461 42 0.034676080778 9.147310520603 132.86221187687 749.14252549916
+5	8294 1019 25 504 4.736737406642 92.845715920505 27 0.118265478817 28.23661957634 218.82899644271 3986.8817464263
+

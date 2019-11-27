@@ -1,0 +1,56 @@
+file 7230 1574681846                                            
+version 2
+run Second-n4-11-20191125-12:37:26-3804
+attr configname Second-n4
+attr datetime 20191125-12:37:26
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3804
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1033 0 397 0 93.804216785769 43 0 2 35 49
+1	2665 9 0 0 0 0 1 0 0 0 0
+2	2674 650 0 402 0 93.994401873441 27 0 5 43 117
+3	3324 1952 14 408 2.039243283073 95.1960502079 52 0.079854730749 12.587441696984 190.0050785377 1444.9633960867
+4	5276 644 14 408 2.039243283073 95.1960502079 17 0.538301014593 12.587441696984 115.17514249092 1198.8353567021
+5	5920 1308 25 404 5.462739358186 93.994401873441 35 0.079854730749 5.846405101428 74.829936046778 246.12803938461
+

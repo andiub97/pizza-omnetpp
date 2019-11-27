@@ -1,0 +1,56 @@
+file 9987 1574681817                                            
+version 2
+run First-n2-8-20191125-12:36:57-3116
+attr configname First-n2
+attr datetime 20191125-12:36:57
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3116
+attr repetition 8
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 8
+attr seedset 8
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 2281 0 541 0 99.941074359136 93 0 6 172 510
+1	3906 9 0 0 0 0 1 0 0 0 0
+2	3915 730 0 540 0 99.732137414577 30 0 6 59 199
+3	4645 2670 10 543 1.184731110871 99.941074359136 71 0.163669208169 21.105639102939 359.77088866714 3604.7163090135
+4	7315 759 10 543 1.184731110871 99.941074359136 20 0.163669208169 21.105639102939 184.02819244373 2767.8879201005
+5	8074 1911 17 522 4.545711907634 94.573796144021 51 0.411801806332 8.175888486497 175.74269622341 836.82838891303
+

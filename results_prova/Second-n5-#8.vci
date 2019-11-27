@@ -1,0 +1,56 @@
+file 7967 1574681851                                            
+version 2
+run Second-n5-8-20191125-12:37:31-1384
+attr configname Second-n5
+attr datetime 20191125-12:37:31
+attr experiment Second-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1384
+attr repetition 8
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 8
+attr seedset 8
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1628 1534 0 420 0 97.490226643395 63 0 8 139 619
+1	3162 9 0 0 0 0 1 0 0 0 0
+2	3171 650 0 390 0 93.432595601571 27 0 5 47 145
+3	3821 2072 10 426 1.498645717792 97.810895073681 55 0.33013805329 23.621945357676 316.99107867146 3598.2511240894
+4	5893 646 10 400 1.498645717792 94.679275553781 17 1.442762393099 23.621945357676 158.31470339564 2541.5140122265
+5	6539 1426 25 426 8.076597336869 97.810895073681 38 0.33013805329 9.152984002667 158.67637527582 1056.7371118629
+

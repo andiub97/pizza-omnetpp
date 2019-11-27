@@ -1,0 +1,56 @@
+file 9702 1574681811                                            
+version 2
+run First-n5-2-20191125-12:36:51-11216
+attr configname First-n5
+attr datetime 20191125-12:36:51
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11216
+attr repetition 2
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 2
+attr seedset 2
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 2695 0 503 0 99.526833495161 110 0 9 413 2379
+1	4322 9 0 0 0 0 1 0 0 0 0
+2	4331 811 0 500 0 98.455549916527 33 0 21 396 6264
+3	5142 2279 14 493 4.959248770767 95.660346531393 60 0.099967351065 84.117224197132 770.03540787748 27980.84818939
+4	7421 228 14 483 4.959248770767 95.383804567285 6 4.140577233661 84.117224197132 300.86720932637 21548.983207952
+5	7649 2051 22 493 6.400572828014 95.660346531393 54 0.099967351065 22.676243301269 469.16819855111 6431.8649814384
+

@@ -1,0 +1,56 @@
+file 9261 1574681821                                            
+version 2
+run First-n2-11-20191125-12:37:01-9348
+attr configname First-n2
+attr datetime 20191125-12:37:01
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9348
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1990 0 505 0 98.085536876994 82 0 6 143 425
+1	3619 9 0 0 0 0 1 0 0 0 0
+2	3628 747 0 501 0 97.729373086424 31 0 4 39 83
+3	4375 2442 14 503 1.924040615244 97.729373086424 65 0.080885333004 25.277448673551 298.97967526427 2633.9903127432
+4	6817 647 14 498 1.924040615244 97.208909521994 17 0.093854480607 25.277448673551 127.65863776129 1767.1974779911
+5	7464 1795 27 503 4.534659223345 97.729373086424 48 0.080885333004 8.270678009509 171.32103750297 866.79283475209
+

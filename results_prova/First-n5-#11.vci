@@ -1,0 +1,56 @@
+file 11658 1574681824                                           
+version 2
+run First-n5-11-20191125-12:37:04-3408
+attr configname First-n5
+attr datetime 20191125-12:37:04
+attr experiment First-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3408
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2418 0 652 0 99.468244487204 99 0 4 115 225
+1	4047 9 0 0 0 0 1 0 0 0 0
+2	4056 1320 0 644 0 97.611050485938 54 0 9 185 991
+3	5376 3140 14 654 1.924040615244 99.468244487204 83 0.049261827841 29.95530907508 460.62704553347 5620.6088388624
+4	8516 1150 14 649 1.924040615244 99.012926743333 30 0.537528239247 29.95530907508 322.62550900681 5112.6166261562
+5	9666 1990 27 654 4.534659223345 99.468244487204 53 0.049261827841 6.551423636249 138.00153652666 507.99221270623
+

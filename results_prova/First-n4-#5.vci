@@ -1,0 +1,56 @@
+file 7308 1574681813                                            
+version 2
+run First-n4-5-20191125-12:36:53-11252
+attr configname First-n4
+attr datetime 20191125-12:36:53
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11252
+attr repetition 5
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 5
+attr seedset 5
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 1273 0 419 0 94.295003572216 53 0 3 50 82
+1	2900 9 0 0 0 0 1 0 0 0 0
+2	2909 349 0 198 0 32.186190188271 15 0 3 19 35
+3	3258 2024 14 432 2.812875588987 97.098722816214 54 0.0316248992 8.836034464732 137.28708040317 650.02579996946
+4	5282 638 14 432 2.812875588987 97.098722816214 17 0.0316248992 8.836034464732 53.314182521945 290.35508535861
+5	5920 1386 19 425 4.297919186127 95.140068549909 37 0.094226103633 7.96220149605 83.972897881222 359.67071461085
+

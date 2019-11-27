@@ -1,0 +1,56 @@
+file 6641 1574681867                                            
+version 2
+run Third-n2-15-20191125-12:37:47-11216
+attr configname Third-n2
+attr datetime 20191125-12:37:47
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11216
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1631 1329 0 316 0 99.946605194863 55 0 4 87 207
+1	2960 9 0 0 0 0 1 0 0 0 0
+2	2969 720 0 310 0 99.354307966772 30 0 9 153 927
+3	3689 1475 25 312 15.176464933403 99.354307966772 39 0.862179509923 50.219373832921 630.65598896417 21013.762489931
+4	5164 1013 25 298 15.176464933403 94.521214168612 27 0.862179509923 13.246354306783 161.93945472632 1256.3744866442
+5	6177 462 67 312 24.083137209899 99.354307966772 12 14.004604181497 50.219373832921 468.71653423785 19757.388003286
+

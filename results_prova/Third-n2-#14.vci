@@ -1,0 +1,56 @@
+file 5038 1574681866                                            
+version 2
+run Third-n2-14-20191125-12:37:46-1168
+attr configname Third-n2
+attr datetime 20191125-12:37:46
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1168
+attr repetition 14
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 14
+attr seedset 14
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1242 0 233 0 98.305056431688 51 0 11 241 1661
+1	2871 9 0 0 0 0 1 0 0 0 0
+2	2880 332 0 241 0 99.892188981149 14 0 13 91 819
+3	3212 912 7 227 4.841322362366 97.846859376983 24 0.881228344075 28.955769583029 372.81437915617 7893.5021877554
+4	4124 875 7 227 4.841322362366 97.846859376983 23 0.881228344075 28.955769583029 371.73614847406 7892.3396063516
+5	4999 37 46 46 16.376317938107 16.376317938107 1 1.078230682116 1.078230682116 1.078230682116 1.1625814038563
+

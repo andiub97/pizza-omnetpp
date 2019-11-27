@@ -1,0 +1,56 @@
+file 9654 1574681809                                            
+version 2
+run First-n2-3-20191125-12:36:49-3408
+attr configname First-n2
+attr datetime 20191125-12:36:49
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3408
+attr repetition 3
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 3
+attr seedset 3
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 2502 0 480 0 99.47401156586 103 0 9 317 1503
+1	4127 9 0 0 0 0 1 0 0 0 0
+2	4136 902 0 484 0 99.521374671157 37 0 12 214 1518
+3	5038 2307 14 482 3.43315566706 99.47401156586 61 0.276981160631 43.715144913686 642.67633019777 14330.743062233
+4	7345 500 14 426 3.43315566706 87.014204960617 13 3.139753915202 43.715144913686 354.4650056702 11894.69818371
+5	7845 1807 38 482 6.640850610252 99.47401156586 48 0.276981160631 14.106446023952 288.21132452757 2436.0448785236
+

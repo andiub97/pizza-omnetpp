@@ -1,0 +1,56 @@
+file 9129 1574681815                                            
+version 2
+run First-n4-6-20191125-12:36:55-11052
+attr configname First-n4
+attr datetime 20191125-12:36:55
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11052
+attr repetition 6
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 6
+attr seedset 6
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 1461 0 548 0 99.357099018606 60 0 4 62 126
+1	3088 9 0 0 0 0 1 0 0 0 0
+2	3097 924 0 550 0 99.707966412424 38 0 5 55 147
+3	4021 2553 7 544 4.78327863324 98.487066176473 68 0.211054808565 6.936861779382 130.08154783226 435.88850802704
+4	6574 1649 7 544 4.78327863324 98.487066176473 44 0.211054808565 4.128008389882 63.794770978974 139.05780188634
+5	8223 904 51 510 13.054056576695 93.496730878376 24 0.454329710423 6.936861779382 66.286776853286 296.8307061407
+

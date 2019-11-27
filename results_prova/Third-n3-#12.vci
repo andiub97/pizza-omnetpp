@@ -1,0 +1,56 @@
+file 5434 1574681873                                            
+version 2
+run Third-n3-12-20191125-12:37:53-2148
+attr configname Third-n3
+attr datetime 20191125-12:37:53
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 2148
+attr repetition 12
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 12
+attr seedset 12
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 890 0 248 0 98.460715875638 37 0 4 50 114
+1	2519 9 0 0 0 0 1 0 0 0 0
+2	2528 638 0 246 0 98.310090251017 27 0 5 59 169
+3	3166 1133 19 239 7.347231324444 96.346897663211 30 0.886964746111 33.927870068385 340.84754648495 6135.9875085574
+4	4299 601 19 239 7.347231324444 96.346897663211 16 0.886964746111 11.527825732991 106.70403818016 837.0243984301
+5	4900 532 51 214 20.918223316105 88.685871270314 14 1.349540041447 33.927870068385 234.14350830479 5298.9631101273
+

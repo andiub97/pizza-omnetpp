@@ -1,0 +1,56 @@
+file 8383 1574681826                                            
+version 2
+run Second-n2-10-20191125-12:37:06-1100
+attr configname Second-n2
+attr datetime 20191125-12:37:06
+attr experiment Second-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1100
+attr repetition 10
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 10
+attr seedset 10
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1730 0 439 0 99.061064763718 71 0 3 81 147
+1	3362 9 0 0 0 0 1 0 0 0 0
+2	3371 796 0 445 0 99.698089952501 33 0 7 80 304
+3	4167 2107 16 447 5.226442253557 99.698089952501 56 0.304889198283 16.8341777499 248.86081415652 2240.2450627801
+4	6274 529 16 358 5.226442253557 81.60042366876 14 1.005374800592 16.8341777499 132.79481549634 1741.8213533129
+5	6803 1578 21 447 5.565963103578 99.698089952501 42 0.304889198283 7.85901353606 116.06599866018 498.42370946719
+

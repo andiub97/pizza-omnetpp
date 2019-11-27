@@ -1,0 +1,56 @@
+file 5666 1574681871                                            
+version 2
+run Third-n2-18-20191125-12:37:51-9004
+attr configname Third-n2
+attr datetime 20191125-12:37:51
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9004
+attr repetition 18
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 18
+attr seedset 18
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 785 0 237 0 83.28646720671 33 0 2 24 32
+1	2414 9 0 0 0 0 1 0 0 0 0
+2	2423 695 0 259 0 99.171355689915 29 0 4 40 90
+3	3118 1273 8 261 1.95605794728 99.171355689915 34 0.082821880902 27.484843191841 215.15621546055 2564.9779976985
+4	4391 604 8 249 1.95605794728 87.223813679706 16 0.082821880902 27.484843191841 145.31226560398 2248.2286409146
+5	4995 669 24 261 7.383017765291 99.171355689915 18 0.995240185808 8.842478748612 69.843949856572 316.74935678383
+

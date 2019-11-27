@@ -1,0 +1,56 @@
+file 5787 1574681875                                            
+version 2
+run Third-n3-14-20191125-12:37:55-2652
+attr configname Third-n3
+attr datetime 20191125-12:37:55
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 2652
+attr repetition 14
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 14
+attr seedset 14
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1294 0 283 0 99.761024703403 53 0 5 102 286
+1	2923 9 0 0 0 0 1 0 0 0 0
+2	2932 431 0 266 0 90.639635353589 18 0 13 117 1133
+3	3363 1211 7 285 4.841322362366 99.761024703403 32 0.881228344075 57.110048768238 278.74621089844 5423.4415315677
+4	4574 1062 7 285 4.841322362366 99.761024703403 28 0.881228344075 16.510409895262 204.31292760081 2028.3739897262
+5	5636 149 43 255 16.376317938107 88.307339454358 4 1.078230682116 57.110048768238 74.433283297627 3395.0675418414
+

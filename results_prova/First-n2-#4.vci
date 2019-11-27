@@ -1,0 +1,56 @@
+file 8492 1574681810                                            
+version 2
+run First-n2-4-20191125-12:36:50-11068
+attr configname First-n2
+attr datetime 20191125-12:36:50
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11068
+attr repetition 4
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 4
+attr seedset 4
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 1432 0 461 0 97.20665805666 59 0 4 67 137
+1	3059 9 0 0 0 0 1 0 0 0 0
+2	3068 750 0 453 0 95.719563315375 31 0 3 33 59
+3	3818 2336 7 475 8.055499867566 99.697194303525 62 0.027571810031 14.827452535608 179.15104200397 959.12085408857
+4	6154 1617 7 475 8.055499867566 99.697194303525 43 0.027571810031 6.629108790088 93.202798859967 312.46364818515
+5	7771 719 82 463 19.794854280532 97.20665805666 19 0.212508315786 14.827452535608 85.948243144006 646.65720590342
+

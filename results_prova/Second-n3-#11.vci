@@ -1,0 +1,56 @@
+file 7542 1574681836                                            
+version 2
+run Second-n3-11-20191125-12:37:16-7504
+attr configname Second-n3
+attr datetime 20191125-12:37:16
+attr experiment Second-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 7504
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1334 0 409 0 95.442004512271 55 0 4 57 111
+1	2966 9 0 0 0 0 1 0 0 0 0
+2	2975 575 0 422 0 98.614999228637 24 0 2 22 32
+3	3550 1995 14 417 2.039243283073 95.797789059868 53 0.041406638887 11.423445373457 170.47302943626 884.80709034462
+4	5545 641 14 393 2.039243283073 93.389178371204 17 0.330249864617 11.423445373457 79.037211806374 579.85382939217
+5	6186 1354 25 417 5.462739358186 95.797789059868 36 0.041406638887 5.158699010385 91.435817629882 304.95326095245
+

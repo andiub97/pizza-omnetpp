@@ -1,0 +1,56 @@
+file 8941 1574681821                                            
+version 2
+run First-n4-11-20191125-12:37:01-10656
+attr configname First-n4
+attr datetime 20191125-12:37:01
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10656
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1631 1523 0 488 0 96.393541800049 63 0 4 73 143
+1	3154 9 0 0 0 0 1 0 0 0 0
+2	3163 744 0 516 0 98.944996654541 31 0 3 25 39
+3	3907 2516 14 522 1.924040615244 99.026618728535 67 0.03281854069 12.35799740594 162.7357202278 728.11764223235
+4	6423 752 14 522 1.924040615244 99.026618728535 20 0.114087257627 12.35799740594 64.920273611722 403.7889621173
+5	7175 1764 27 518 4.534659223345 98.944996654541 47 0.03281854069 6.04080328345 97.815446616079 324.32868011506
+

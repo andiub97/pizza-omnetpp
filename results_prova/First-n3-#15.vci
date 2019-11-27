@@ -1,0 +1,56 @@
+file 10557 1574681827                                           
+version 2
+run First-n3-15-20191125-12:37:07-9724
+attr configname First-n3
+attr datetime 20191125-12:37:07
+attr experiment First-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9724
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2186 0 559 0 99.673864630517 90 0 6 209 761
+1	3815 9 0 0 0 0 1 0 0 0 0
+2	3824 1367 0 565 0 99.938618102827 56 0 10 244 1420
+3	5191 2682 24 561 6.942359780066 99.673864630517 71 0.139134041988 34.85366358689 563.69941422262 7501.2594811913
+4	7873 1652 24 561 6.942359780066 99.673864630517 44 0.139134041988 12.3283815991 209.77437663465 1380.5288560571
+5	9525 1030 99 520 15.776463549009 94.832110312324 27 1.320657496656 34.85366358689 353.92503758797 6120.7306251342
+

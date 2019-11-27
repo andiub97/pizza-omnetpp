@@ -1,0 +1,56 @@
+file 8523 1574681826                                            
+version 2
+run First-n2-15-20191125-12:37:06-9820
+attr configname First-n2
+attr datetime 20191125-12:37:06
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9820
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1562 0 468 0 99.561172026336 65 0 5 86 208
+1	3191 9 0 0 0 0 1 0 0 0 0
+2	3200 819 0 462 0 98.724782631888 34 0 4 53 129
+3	4019 2251 24 451 6.942359780066 92.93447694536 60 0.109198606943 15.764162529622 201.43736280905 1197.7595061922
+4	6270 1610 24 443 6.942359780066 89.26237874266 43 0.109198606943 7.616720965736 110.20368848317 432.17700414174
+5	7880 641 92 451 17.961403423759 92.93447694536 17 0.437450542753 15.764162529622 91.233674325877 765.58250205043
+

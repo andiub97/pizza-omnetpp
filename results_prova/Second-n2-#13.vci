@@ -1,0 +1,56 @@
+file 7256 1574681832                                            
+version 2
+run Second-n2-13-20191125-12:37:12-1316
+attr configname Second-n2
+attr datetime 20191125-12:37:12
+attr experiment Second-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1316
+attr repetition 13
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 13
+attr seedset 13
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1091 0 372 0 92.198496778668 45 0 3 44 74
+1	2723 9 0 0 0 0 1 0 0 0 0
+2	2732 670 0 397 0 98.777638975082 28 0 3 32 54
+3	3402 1926 14 392 11.215102530395 97.045706641205 51 0.030206774889 14.441624864142 202.66393404481 1393.7880480379
+4	5328 1320 14 379 11.215102530395 92.222883138227 35 0.030206774889 8.943067034478 100.88855737358 504.14065221048
+5	6648 606 47 392 19.115697713847 97.045706641205 16 0.048169682426 14.441624864142 101.77537667123 889.6473958274
+

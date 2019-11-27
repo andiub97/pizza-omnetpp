@@ -1,0 +1,56 @@
+file 10344 1574681825                                           
+version 2
+run First-n4-14-20191125-12:37:05-6704
+attr configname First-n4
+attr datetime 20191125-12:37:05
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6704
+attr repetition 14
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 14
+attr seedset 14
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 2232 0 580 0 98.003177869844 91 0 7 205 741
+1	3861 9 0 0 0 0 1 0 0 0 0
+2	3870 970 0 548 0 94.41612908597 40 0 5 68 180
+3	4840 2751 7 582 2.740669890449 98.003177869844 73 0.045670869862 17.799824674654 315.49084119389 2506.2411726964
+4	7591 2064 7 582 2.740669890449 98.003177869844 55 0.045670869862 11.834962299629 189.22034967504 1125.0112829604
+5	9655 687 113 451 23.957282123322 72.673655820911 18 0.479713721851 17.799824674654 126.27049151885 1381.229889736
+

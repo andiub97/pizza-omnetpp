@@ -1,0 +1,56 @@
+file 5768 1574681880                                            
+version 2
+run Third-n3-17-20191125-12:38:00-4588
+attr configname Third-n3
+attr datetime 20191125-12:38:00
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4588
+attr repetition 17
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 17
+attr seedset 17
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 833 0 250 0 83.452750095864 35 0 2 27 37
+1	2462 9 0 0 0 0 1 0 0 0 0
+2	2471 595 0 270 0 90.060681485501 25 0 3 26 48
+3	3066 1350 17 283 8.107354914916 95.401127116087 36 0.662802101744 16.753672249936 210.08253528736 1936.6846801582
+4	4416 565 17 283 8.107354914916 95.401127116087 15 2.35837177978 16.753672249936 118.37616376269 1309.6025176369
+5	4981 785 29 272 12.628167597443 90.060681485501 21 0.662802101744 14.970879766658 91.706371524669 627.08216252133
+

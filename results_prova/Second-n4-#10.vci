@@ -1,0 +1,56 @@
+file 9307 1574681845                                            
+version 2
+run Second-n4-10-20191125-12:37:24-11176
+attr configname Second-n4
+attr datetime 20191125-12:37:24
+attr experiment Second-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11176
+attr repetition 10
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 10
+attr seedset 10
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1634 1832 0 492 0 98.274387860263 75 0 6 115 321
+1	3466 9 0 0 0 0 1 0 0 0 0
+2	3475 1074 0 497 0 99.220219058134 44 0 6 88 294
+3	4549 2378 17 499 5.226442253557 99.220219058134 63 0.369880401209 23.58942000571 384.60773341699 4335.0964559466
+4	6927 948 17 494 5.226442253557 98.274387860263 25 0.466877681883 23.58942000571 239.28819204655 3446.2151473307
+5	7875 1430 22 499 5.328179012215 99.220219058134 38 0.369880401209 10.701595610912 145.31954137045 888.88130861594
+

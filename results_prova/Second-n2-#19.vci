@@ -1,0 +1,56 @@
+file 7986 1574681840                                            
+version 2
+run Second-n2-19-20191125-12:37:20-1400
+attr configname Second-n2
+attr datetime 20191125-12:37:20
+attr experiment Second-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1400
+attr repetition 19
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 19
+attr seedset 19
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 1367 0 414 0 99.656058209173 56 0 4 78 176
+1	2999 9 0 0 0 0 1 0 0 0 0
+2	3008 1070 0 385 0 92.821187117625 44 0 5 122 438
+3	4078 1953 7 416 1.216599224106 99.656058209173 52 0.18150275887 24.414669166778 361.78770179035 5449.8230787644
+4	6031 1118 7 416 1.216599224106 99.656058209173 30 0.18150275887 5.981580632943 83.518174844539 330.31665114936
+5	7149 835 16 392 3.047217177555 96.018310040242 22 0.23251364234 24.414669166778 278.26952694581 5119.506427615
+

@@ -1,0 +1,56 @@
+file 10036 1574681818                                           
+version 2
+run First-n2-9-20191125-12:36:58-11212
+attr configname First-n2
+attr datetime 20191125-12:36:58
+attr experiment First-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11212
+attr repetition 9
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 9
+attr seedset 9
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 2570 0 525 0 99.447200976747 105 0 7 270 948
+1	4197 9 0 0 0 0 1 0 0 0 0
+2	4206 990 0 506 0 98.339730185388 40 0 16 314 3464
+3	5196 2419 8 521 0.965486833298 99.446796107348 64 0.11836098049 53.394490047946 670.60548139863 18316.840057553
+4	7615 1920 8 521 0.965486833298 99.446796107348 51 0.11836098049 12.893413357118 290.90929892131 2264.3108122143
+5	9535 499 31 511 2.704536815502 98.781872882784 13 0.89140936595 53.394490047946 379.69618247732 16052.529245338
+

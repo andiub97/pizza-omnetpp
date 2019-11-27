@@ -1,0 +1,56 @@
+file 5969 1574681858                                            
+version 2
+run Third-n2-5-20191125-12:37:38-4744
+attr configname Third-n2
+attr datetime 20191125-12:37:38
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4744
+attr repetition 5
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 5
+attr seedset 5
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 1322 0 293 0 99.869918168676 55 0 4 113 335
+1	2947 9 0 0 0 0 1 0 0 0 0
+2	2956 455 0 254 0 86.696082932914 19 0 8 71 417
+3	3411 1278 16 289 5.085741223811 99.426147304767 34 0.003780095928 43.147000768744 311.78919097156 5968.8294572053
+4	4689 304 16 250 5.085741223811 86.514703587251 8 0.003780095928 43.147000768744 124.20989540652 4080.2792025138
+5	4993 974 25 289 7.676024802913 99.426147304767 26 1.317924923561 17.972516414355 187.57929556503 1888.5502546915
+

@@ -1,0 +1,56 @@
+file 6745 1574681864                                            
+version 2
+run Third-n2-12-20191125-12:37:44-3376
+attr configname Third-n2
+attr datetime 20191125-12:37:44
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3376
+attr repetition 12
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 12
+attr seedset 12
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 963 0 309 0 99.087852048837 40 0 3 40 64
+1	2592 9 0 0 0 0 1 0 0 0 0
+2	2601 1088 0 316 0 99.474691320934 45 0 8 160 722
+3	3689 1527 19 311 7.347231324444 99.087852048837 40 1.158693424779 31.236701036503 492.69708183929 8674.8078424101
+4	5216 713 19 311 7.347231324444 99.087852048837 19 1.158693424779 13.760911157038 98.627607910133 673.77241920208
+5	5929 814 62 303 26.739489343184 96.68487657234 21 11.06998439993 31.236701036503 394.06947392915 8001.035423208
+

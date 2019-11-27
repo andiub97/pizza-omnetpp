@@ -1,0 +1,56 @@
+file 7518 1574681832                                            
+version 2
+run Second-n3-8-20191125-12:37:12-4772
+attr configname Second-n3
+attr datetime 20191125-12:37:12
+attr experiment Second-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 4772
+attr repetition 8
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 8
+attr seedset 8
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1628 1331 0 389 0 93.605501875218 55 0 5 79 223
+1	2959 9 0 0 0 0 1 0 0 0 0
+2	2968 556 0 368 0 88.853644891984 23 0 6 51 195
+3	3524 1996 10 412 1.498645717792 97.972051121614 53 0.009177396334 24.2705115182 220.01295583535 2221.3941351389
+4	5520 644 10 384 1.498645717792 92.204864356771 17 0.707372480529 24.2705115182 116.19164330425 1739.4952986841
+5	6164 1352 20 412 7.092395775306 97.972051121614 36 0.009177396334 7.200967734981 103.8213125311 481.89883645482
+

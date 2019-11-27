@@ -1,0 +1,56 @@
+file 7013 1574681873                                            
+version 2
+run Third-n4-7-20191125-12:37:53-11044
+attr configname Third-n4
+attr datetime 20191125-12:37:53
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 11044
+attr repetition 7
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 7
+attr seedset 7
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 1531 0 334 0 97.378207722882 63 0 5 131 419
+1	3158 9 0 0 0 0 1 0 0 0 0
+2	3167 666 0 346 0 98.38896576104 28 0 7 92 414
+3	3833 1589 10 348 3.965444219319 98.38896576104 42 2.114247970566 42.963331094868 548.39662399548 12283.453825805
+4	5422 1204 10 343 3.965444219319 97.961727146854 32 2.114247970566 14.842619335258 247.49477365784 2424.8590558117
+5	6626 385 32 348 12.428367818012 98.38896576104 10 10.880877969905 42.963331094868 300.90185033764 9858.594769993
+

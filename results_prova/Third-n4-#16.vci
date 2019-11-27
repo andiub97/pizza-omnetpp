@@ -1,0 +1,56 @@
+file 5931 1574681887                                            
+version 2
+run Third-n4-16-20191125-12:38:07-2736
+attr configname Third-n4
+attr datetime 20191125-12:38:07
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 2736
+attr repetition 16
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 16
+attr seedset 16
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1133 0 287 0 99.783018930036 47 0 3 55 99
+1	2762 9 0 0 0 0 1 0 0 0 0
+2	2771 526 0 281 0 98.165185192282 22 0 6 47 167
+3	3297 1316 7 276 1.221245552503 96.424851081571 35 0.210487082057 37.068196349089 338.54004638196 6067.084182003
+4	4613 857 7 272 1.221245552503 95.410259949711 23 0.210487082057 9.215201564739 118.10603869931 715.02711939729
+5	5470 459 29 276 8.754840503303 96.424851081571 12 6.295839224838 37.068196349089 220.43400768265 5352.0570626058
+

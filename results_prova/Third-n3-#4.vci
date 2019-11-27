@@ -1,0 +1,56 @@
+file 4843 1574681864                                            
+version 2
+run Third-n3-4-20191125-12:37:44-6064
+attr configname Third-n3
+attr datetime 20191125-12:37:44
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6064
+attr repetition 4
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 4
+attr seedset 4
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 911 0 221 0 98.868114975417 38 0 5 75 231
+1	2536 9 0 0 0 0 1 0 0 0 0
+2	2545 250 0 188 0 80.974033470596 11 0 3 11 21
+3	2795 1023 11 223 16.149876476012 98.868114975417 27 0.243301593804 22.622020434905 282.47432815813 4391.9775080032
+4	3818 755 11 223 16.149876476012 98.868114975417 20 0.243301593804 22.622020434905 212.84446556508 3361.6523115408
+5	4573 268 28 210 24.754643265525 86.948660159941 7 0.408889309969 21.404651875048 69.629862593053 1030.3251964624
+

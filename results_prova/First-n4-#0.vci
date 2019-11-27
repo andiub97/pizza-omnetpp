@@ -1,0 +1,56 @@
+file 9840 1574681808                                            
+version 2
+run First-n4-0-20191125-12:36:48-10872
+attr configname First-n4
+attr datetime 20191125-12:36:48
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10872
+attr repetition 0
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 0
+attr seedset 0
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 2193 0 517 0 99.679083902842 90 0 9 287 1645
+1	3820 9 0 0 0 0 1 0 0 0 0
+2	3829 1129 0 504 0 97.18947984794 46 0 13 321 2579
+3	4958 2440 15 513 5.326445306984 99.265510908383 64 0.532383693608 51.382313660483 962.18531905183 27555.64543155
+4	7398 1664 15 500 5.326445306984 97.001960896737 44 0.532383693608 15.51264656584 300.33943740353 3056.7490890221
+5	9062 776 254 513 54.976555214419 99.265510908383 20 15.194318997882 51.382313660483 661.8458816483 24498.896342528
+

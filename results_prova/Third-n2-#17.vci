@@ -1,0 +1,56 @@
+file 6262 1574681868                                            
+version 2
+run Third-n2-17-20191125-12:37:48-2172
+attr configname Third-n2
+attr datetime 20191125-12:37:48
+attr experiment Third-n2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 2172
+attr repetition 17
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 17
+attr seedset 17
+param **.PS.maxInventoriedPS 2
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1383 0 297 0 97.421439608244 57 0 10 220 1376
+1	3012 9 0 0 0 0 1 0 0 0 0
+2	3021 649 0 271 0 86.643728390507 27 0 10 163 1133
+3	3670 1295 16 295 8.107354914916 97.309651109563 34 2.086358701738 39.482268386506 534.29798701711 12349.785966499
+4	4965 346 16 203 8.107354914916 66.993063765008 9 6.903627074994 39.482268386506 264.68058183028 8456.3346999534
+5	5311 949 26 295 10.392628908017 97.309651109563 25 2.086358701738 21.826443766762 269.61740518683 3893.451266546
+

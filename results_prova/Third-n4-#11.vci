@@ -1,0 +1,56 @@
+file 6693 1574681877                                            
+version 2
+run Third-n4-11-20191125-12:37:57-10560
+attr configname Third-n4
+attr datetime 20191125-12:37:57
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10560
+attr repetition 11
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 11
+attr seedset 11
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1631 1283 0 346 0 98.995279768466 53 0 4 74 162
+1	2914 9 0 0 0 0 1 0 0 0 0
+2	2923 598 0 342 0 95.401493242667 25 0 4 34 76
+3	3521 1585 14 348 2.647125681843 98.995279768466 42 0.738924916975 27.536997576007 273.53874181676 3145.1281178501
+4	5106 493 14 303 2.647125681843 87.150990738096 13 2.222615153374 27.536997576007 137.59292729007 2175.7029307404
+5	5599 1092 26 348 9.056364407368 98.995279768466 29 0.738924916975 12.557833626631 135.94581452669 969.42518710966
+

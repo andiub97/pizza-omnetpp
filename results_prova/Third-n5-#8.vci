@@ -1,0 +1,56 @@
+file 5609 1574681879                                            
+version 2
+run Third-n5-8-20191125-12:37:59-3036
+attr configname Third-n5
+attr datetime 20191125-12:37:59
+attr experiment Third-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 3036
+attr repetition 8
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 8
+attr seedset 8
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1625 947 0 298 0 93.212843839187 39 0 4 49 103
+1	2572 9 0 0 0 0 1 0 0 0 0
+2	2581 254 0 289 0 90.606705676033 11 0 1 5 5
+3	2835 1386 10 304 2.300462636808 93.44402811635 37 0.626375196046 10.035976877617 121.95978443722 584.20315211152
+4	4221 299 10 300 2.300462636808 93.212843839187 8 0.815839612021 9.449845766627 31.288838575279 189.43460583157
+5	4520 1087 24 304 12.189805680156 93.44402811635 29 0.626375196046 10.035976877617 90.670945861942 394.76854627995
+

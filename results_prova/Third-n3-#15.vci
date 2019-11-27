@@ -1,0 +1,56 @@
+file 6017 1574681877                                            
+version 2
+run Third-n3-15-20191125-12:37:57-9244
+attr configname Third-n3
+attr datetime 20191125-12:37:57
+attr experiment Third-n3
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 9244
+attr repetition 15
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 15
+attr seedset 15
+param **.PS.maxInventoriedPS 3
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 1272 0 283 0 99.340362516357 53 0 4 106 290
+1	2901 9 0 0 0 0 1 0 0 0 0
+2	2910 601 0 270 0 97.238544047826 25 0 10 148 1020
+3	3511 1252 28 279 15.176464933403 98.292192985571 33 2.507238587361 64.400558653686 651.22121313629 26436.339993717
+4	4763 942 28 279 15.176464933403 98.292192985571 25 2.507238587361 15.990525495503 216.23104052578 2157.8318417776
+5	5705 310 147 273 53.60458634084 97.776891989775 8 43.526053312438 64.400558653686 434.99017261052 24278.50815194
+

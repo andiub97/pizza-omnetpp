@@ -1,0 +1,56 @@
+file 10466 1574681816                                           
+version 2
+run First-n4-7-20191125-12:36:56-10972
+attr configname First-n4
+attr datetime 20191125-12:36:56
+attr experiment First-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 10972
+attr repetition 7
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 7
+attr seedset 7
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(2s)
+param **.U2.interArrivalTime exponential(4s)
+param **.PS.serviceTimeForInventoryU1 exponential(0.8s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.0s)
+param **.PS.serviceTimeDirectU1 exponential(1.2s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.5
+param **.CS.serviceTimeU1 exponential(0.8s)
+param **.CS.serviceTimeU2 exponential(1.0s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1627 2306 0 529 0 91.492288732963 95 0 8 293 1455
+1	3933 9 0 0 0 0 1 0 0 0 0
+2	3942 1088 0 543 0 94.164631259492 45 0 7 118 470
+3	5030 2717 10 551 1.648071280365 95.726057692699 72 0.185425746489 26.638777257619 565.30791345083 7187.0172388431
+4	7747 1838 10 545 1.648071280365 94.164631259492 49 0.185425746489 11.881474064445 278.16034870563 2184.891251099
+5	9585 879 34 551 7.741080339274 95.726057692699 23 1.335936124709 26.638777257619 287.1475647452 5002.1259877441
+

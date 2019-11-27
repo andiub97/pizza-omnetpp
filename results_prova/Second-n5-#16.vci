@@ -1,0 +1,56 @@
+file 5808 1574681857                                            
+version 2
+run Second-n5-16-20191125-12:37:37-6264
+attr configname Second-n5
+attr datetime 20191125-12:37:37
+attr experiment Second-n5
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 6264
+attr repetition 16
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 16
+attr seedset 16
+param **.PS.maxInventoriedPS 5
+param **.U1.interArrivalTime exponential(3s)
+param **.U2.interArrivalTime exponential(5s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.0s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.2s)
+param **.PS.serviceTimeDirectU1 exponential(1.4s)
+param **.PS.serviceTimeDirectU2 exponential(1.4s)
+param **.PS.probabilityProducing 0.7
+param **.CS.serviceTimeU1 exponential(1.1s)
+param **.CS.serviceTimeU2 exponential(1.4s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1632 591 0 343 0 96.187649772085 25 0 2 20 28
+1	2223 9 0 0 0 0 1 0 0 0 0
+2	2232 280 0 365 0 99.75840228944 12 0 1 6 6
+3	2512 1647 7 358 0.889627516804 98.921838664552 44 0.0204284672 4.429102297237 60.009751673547 133.56181175972
+4	4159 1312 7 358 0.889627516804 98.921838664552 35 0.0204284672 4.119631843242 48.010162449547 95.952428292931
+5	5471 335 17 315 2.079583953941 91.33782352579 9 0.102088097642 4.429102297237 11.999589224 37.609383466792
+

@@ -1,0 +1,56 @@
+file 6002 1574681891                                            
+version 2
+run Third-n4-19-20191125-12:38:11-1504
+attr configname Third-n4
+attr datetime 20191125-12:38:11
+attr experiment Third-n4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network org.omnetpp.queueing.Pizza
+attr processid 1504
+attr repetition 19
+attr replication ""
+attr resultdir results_no_transient
+attr runnumber 19
+attr seedset 19
+param **.PS.maxInventoriedPS 4
+param **.U1.interArrivalTime exponential(4s)
+param **.U2.interArrivalTime exponential(6s)
+param **.PS.serviceTimeForInventoryU1 exponential(1.4s)
+param **.PS.serviceTimeForInventoryU2 exponential(1.4s)
+param **.PS.serviceTimeDirectU1 exponential(1.8s)
+param **.PS.serviceTimeDirectU2 exponential(1.8s)
+param **.PS.probabilityProducing 0.8
+param **.CS.serviceTimeU1 exponential(2.3s)
+param **.CS.serviceTimeU2 exponential(2.3s)
+
+vector 0 Pizza.EntryQueueU1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Pizza.CS queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Pizza.EntryQueueU2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Pizza.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 4 Pizza.sink lifeTimeU1:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 5 Pizza.sink lifeTimeU2:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1629 989 0 277 0 89.233442121242 41 0 4 64 160
+1	2618 9 0 0 0 0 1 0 0 0 0
+2	2627 505 0 290 0 94.129896238032 21 0 4 24 54
+3	3132 1434 7 303 1.71052345113 98.772931291253 38 0.414277872415 16.678582182507 264.37630813073 2763.4186596698
+4	4566 978 7 303 1.71052345113 98.772931291253 26 0.414277872415 13.665262930721 150.79751405214 1330.4488653093
+5	5544 456 15 296 3.821194064259 95.270265361477 12 0.443549822001 16.678582182507 113.57879407859 1432.9697943605
+
