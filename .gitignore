@@ -44,6 +44,6 @@
 /results_no_transient
 /anf
 /anf_no_transient
-/data
-/data_vectorial
-/data_vectorial_prova
+StatisticalAnalysis/data
+StatisticalAnalysis/data_vectorial
+StatisticalAnalysis/data_vectorial_prova
