@@ -16,6 +16,22 @@ def mean_convergence(array):
     return meaned
 
 
+def mean_convergence_1(array_time, array_value, split=50):
+    array_time, array_value = np.asarray(array_time), np.asarray(array_value)
+    meaned_time, meaned_value = [], []
+    interval_len = int(array_time.size / split)
+    print(interval_len)
+    # split array in @split intervals
+    for i in range(0, split):
+        start = i * interval_len
+        finish = array_time.size if i * interval_len + interval_len > array_time.size else i * interval_len + interval_len
+        meaned_time.append(array_time[start])
+        meaned_value.append(np.mean(array_time[start:finish]))
+    print(meaned_time)
+    print(meaned_value)
+    return meaned_time, meaned_value
+
+
 def plot_measure(dir_measure):
     DATA_VEC_DIR = "./data_vectorial"
     # DATA_VEC_DIR = "./data_vectorial_prova"
@@ -23,14 +39,14 @@ def plot_measure(dir_measure):
         RESULTS_DIR = DATA_VEC_DIR + "/" + results_dir + "/" + dir_measure
         print(RESULTS_DIR)
         for jsons in (os.listdir(RESULTS_DIR)):
-            print(jsons)
+            print("\t" + RESULTS_DIR + "/" + jsons)
             with open(RESULTS_DIR + "/" + jsons) as file:
                 pointed_file = json.load(file)
                 vectors = pointed_file["vectors"]
                 fig, graph = plt.subplots()
                 for vector in vectors:
-                    graph.plot(vector['time'], mean_convergence(vector['value']))
-
+                    # graph.plot(vector['time'], mean_convergence(vector['value']))
+                    graph.plot(vector['time'],mean_convergence(vector['value']))
                 graph.set_title(
                     pointed_file['attributes']['configname'] + " - " + dir_measure +
                     '\n\nMax Inventoried PS (n): ' + pointed_file['moduleparams'][0]['**.PS.maxInventoriedPS'] + "\n" +
@@ -51,7 +67,9 @@ def plot_measure(dir_measure):
                 #             fontweight='bold')
                 plt.savefig('./charts/charts_vector' + results_dir.replace('data', '').replace('_json', '') +
                             "/" + dir_measure + "/" + jsons.replace('.json', ''), bbox_inches='tight')
-                plt.show()
+                plt.clf()
+                # plt.show()
+        break
 
 
 if __name__ == "__main__":

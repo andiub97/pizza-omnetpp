@@ -1,6 +1,7 @@
-for results in  "results" "results_no_transient"
+for results in "results" "results_no_transient"
 do
 cd ../${results}
+echo ${results}
   for config in "First" "Second" "Third"
   do
     for n in 2 3 4 5

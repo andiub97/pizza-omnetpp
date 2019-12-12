@@ -3,7 +3,7 @@ import os
 
 DATA_VEC_DIR = "./data_vectorial"
 # DATA_VEC_DIR = "./data_vectorial_prova"
-for results_dir in os.listdir(DATA_VEC_DIR):
+for results_dir in ['data_results_json']:  # os.listdir(DATA_VEC_DIR):
     RESULTS_DIR = DATA_VEC_DIR + "/" + results_dir
     print("Cleaning " + RESULTS_DIR)
     for measure_dir in os.listdir(RESULTS_DIR):
