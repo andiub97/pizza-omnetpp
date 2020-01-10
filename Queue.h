@@ -26,6 +26,7 @@ class QUEUEING_API Queue : public cSimpleModule
 		simsignal_t queueLengthSignal;
 		simsignal_t queueingTimeSignal;
 		simsignal_t busySignal;
+		simsignal_t timeInsideSystemSignal;
 
         Job *jobServiced;
         cMessage *endServiceMsg;

@@ -42,6 +42,7 @@ class QUEUEING_API Job: public Job_Base
         Job *parent;
         std::vector<Job*> children;
         JobList *jobList;
+        simtime_t entryTime;
         virtual void setParent(Job *parent); // only for addChild()
         virtual void parentDeleted();
         virtual void childDeleted(Job *child);
@@ -84,6 +85,12 @@ class QUEUEING_API Job: public Job_Base
 
         /** Returns the JobList where this job has been registered. */
         JobList *getContainingJobList() {return jobList;}
+
+        /** Methods to set entryTime in the system */
+        virtual void setEntryTime(simtime_t entryTime);
+
+        /** Method to get entryTime in the system */
+        virtual simtime_t getEntryTime(){return entryTime;}
 
 };
 

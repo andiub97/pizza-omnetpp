@@ -31,7 +31,6 @@ void Sink::initialize()
 void Sink::handleMessage(cMessage *msg)
 {
     Job *job = check_and_cast<Job *>(msg);
-
     // gather statistics
     emit(lifeTimeSignal, simTime()- job->getCreationTime());
     if(job->getKind()==1){

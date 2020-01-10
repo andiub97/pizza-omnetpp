@@ -124,6 +124,8 @@ void Server::handleMessage(cMessage *msg)
             throw cRuntimeError("a new job arrived while already servicing one");
 
         jobServiced = check_and_cast<Job *>(msg);
+        //setting entryTime in the system for statistics
+        jobServiced->setEntryTime(simTime());
         EV << "Starting service of " << jobServiced->getName() << endl;
 
         //Serve job from inventory or directly

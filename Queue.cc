@@ -32,6 +32,7 @@ void Queue::initialize()
     droppedSignal = registerSignal("dropped");
     queueingTimeSignal = registerSignal("queueingTime");
     queueLengthSignal = registerSignal("queueLength");
+    timeInsideSystemSignal = registerSignal("timeInsideSystem");
     emit(queueLengthSignal, 0);
     busySignal = registerSignal("busy");
     emit(busySignal, false);
@@ -140,6 +141,7 @@ void Queue::endService(Job *job)
     job->setTotalServiceTime(job->getTotalServiceTime() + d);
     EV << "Unlocking access to " << (job->getSenderModule())->getName() << " (deallocate)" << endl;
     ((Server*) job->getSenderModule())->deallocate();
+    emit(timeInsideSystemSignal,simTime()-job->getEntryTime());
     send(job, "out");
 }
 

@@ -98,4 +98,9 @@ void Job::childDeleted(Job *child)
     children.erase(it);
 }
 
+void Job::setEntryTime(simtime_t entryTime)
+{
+    this->entryTime = entryTime;
+}
+
 }; // namespace
