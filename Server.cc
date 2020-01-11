@@ -66,55 +66,19 @@ void Server::handleMessage(cMessage *msg)
         jobServiced = nullptr;
         EV << "Lock access to PS (allocate) " << endl;
 
-        if(bernoulli(par("probabilityProducing").doubleValue())){
-            if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
-                EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
-                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
-                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
-            }
-        } else {
-            if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
-                EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
-                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
-                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
-            }
-        }
+        this->startProducing();
 
     }
     else if (msg == endProducingMsgU1){
         inventoriedPSU1++;
         EV << "Finished producing PS for inventory U1: n="<< inventoriedPSU1 << endl;
-        if(bernoulli(par("probabilityProducing").doubleValue())){
-            if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
-                EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
-                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
-                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
-            }
-        } else {
-            if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
-                EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
-                simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
-                scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
-            }
-        }
+        this->startProducing();
     }
     else if (msg == endProducingMsgU2){
-            inventoriedPSU2++;
-            EV << "Finished producing PS for inventory U2: n="<< inventoriedPSU2 << endl;
-            if(bernoulli(par("probabilityProducing").doubleValue())){
-                if(inventoriedPSU1 < par("maxInventoriedPS").intValue()) {
-                    EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
-                    simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
-                    scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
-                }
-            } else {
-                if(inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
-                    EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
-                    simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
-                    scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
-                }
-            }
-        }
+        inventoriedPSU2++;
+        EV << "Finished producing PS for inventory U2: n="<< inventoriedPSU2 << endl;
+        this->startProducing();
+    }
     else {
         cancelEvent(endProducingMsgU1);
         cancelEvent(endProducingMsgU2);
@@ -154,6 +118,22 @@ void Server::handleMessage(cMessage *msg)
         }
 
         emit(busySignal, true);
+    }
+}
+
+void Server::startProducing(){
+    if(bernoulli(par("probabilityProducing").doubleValue())){
+        if(inventoriedPSU1+inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
+            EV << "Start producing PS for U1: n="<< inventoriedPSU1 << endl;
+            simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU1");
+            scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU1);
+        }
+    } else {
+        if(inventoriedPSU1+inventoriedPSU2 < par("maxInventoriedPS").intValue()) {
+            EV << "Start producing PS for U2: n="<< inventoriedPSU2 << endl;
+            simtime_t serviceTimeForInventory = par("serviceTimeForInventoryU2");
+            scheduleAt(simTime()+serviceTimeForInventory,endProducingMsgU2);
+        }
     }
 }
 

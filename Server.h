@@ -38,6 +38,7 @@ class QUEUEING_API Server : public cSimpleModule, public IServer
 
         int inventoriedPSU1;
         int inventoriedPSU2;
+        virtual void startProducing();
 
     public:
         Server();
