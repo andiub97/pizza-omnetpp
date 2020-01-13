@@ -40,12 +40,6 @@
 #OmnetPP Folders
 /out
 /templates
-/results
-/results_no_transient
-/single-results
-/single-results_no_transient
-/anf
-/anf_no_transient
 StatisticalAnalysis/data
 StatisticalAnalysis/data_vectorial
-StatisticalAnalysis/data_vectorial_prova
+/simulation_data
